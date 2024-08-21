@@ -117,4 +117,52 @@ class EMSData:
 
 
 
+@dataclass
+class D1x0EMSData:
+    system_time: str  # HHMMSSFF
+    manifold_pressure: float  # unit: inHg * 100 (4)
+    oil_temp: int  # unit : deg celcius / XXX (3)
+    oil_pressure: int  # unit : psi / (3)
+    fuel_pressure: float  # unit: PSI / n * 10 / XXX (3)
+    volts: float  # n * 10 / (3)
+    amps: float  # n * 10 / (3)
+    rpm: int  # n / 10 (3)
+    fuel_flow: float  # unit: gallons per hour / n * 10 / (3)
+    fuel_remaining: float  # unit: gallons / calculated by fuel computer / n * 10 / XXX (4)
+    fuel_level_1: float  # unit: gallons / if MAIN tank exists, it will be MAIN / n * 10 / XXX (3)
+    fuel_level_2: float  # unit: gallons / n * 10 / XXX (3)
+    gp_1: str  # unit: variable / n * 10 / +- value unit / +1234C (8)
+    gp_2: str  # unit: variable / n * 10 / +- value unit / +1234C (8)
+    gp_3: str  # unit: variable / n * 10 / +- value unit / +1234C (8)
+    gp_thermocouple: int # (4)
+    egt_1: int #(4)
+    egt_2: int #(4)
+    egt_3: int #(4)
+    egt_4: int #(4)
+    egt_5: int #(4)
+    egt_6: int #(4)
+    cht_1: int #(3)
+    cht_2: int #(3)
+    cht_3: int #(3)
+    cht_4: int #(3)
+    cht_5: int #(3)
+    cht_6: int #(3)
+    contact_1: int #(1)
+    contact_2: int #(2)
+
+@dataclass
+class D1x0EFISData:
+    system_time: str  # HHMMSSFF
+    pitch: float  # unit: deg / n * 10 / positive = pitch up / XXXX is unavailable
+    roll: float  # unit: deg / n * 10 / positive = right bank / XXXXX
+    yaw: int  # unit: deg / XXX
+    ias: float  # IAS / unit: m/s / n * 10 / XXXX
+#    pressure_alt: int  # unit : feet / at 29.92Hg / can be minus (sea level) / XXXXXX
+#    displayed_alt: int
+#    turn_rate: float  # unit: deg / XXXX
+#    vertical_speed: float  # unit: ft/min / positive = climbing / XXX(4)
+    lateral_accel: float  # unit: g / n * 100 / positive = left skid (ball right) / XXX
+    vertical_accel: float  # unit: g / n * 100 / positive = going up accel / XXX
+    aoa: int  # AOA / unit: % / XX
+
 
