@@ -1,0 +1,10 @@
+build/
+dist/
+*.txt
+*.csv
+*.ods
+.~*
+__pycache__
+*.code-workspace
+*.egg-info
+
