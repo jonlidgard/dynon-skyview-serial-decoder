@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as fh:
 
 setuptools.setup(
     name='dynon_serial_decoder',
-    author='Taylor Hoshino',
+    author='Taylor Hoshino, Jon Lidgard',
     author_email='taylor@kloa.kr',
     description='Serial Data Decoder for Dynon Skyview & D1x0 systems',
     keywords='dynon, skyview, d100, d120, d180, ems, efis, serial, decoder',
