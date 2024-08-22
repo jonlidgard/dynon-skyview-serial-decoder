@@ -4,11 +4,11 @@ with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='dynon_skyview_serial_decoder',
+    name='dynon_serial_decoder',
     author='Taylor Hoshino',
     author_email='taylor@kloa.kr',
-    description='Serial Data Decoder for Dynon Skyview',
-    keywords='dynon, skyview, serial, decoder',
+    description='Serial Data Decoder for Dynon Skyview & D1x0 systems',
+    keywords='dynon, skyview, d100, d120, d180, ems, efis, serial, decoder',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/taylor224/dynon-skyview-serial-decoder',
